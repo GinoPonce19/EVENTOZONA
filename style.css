@@ -1,0 +1,549 @@
+body{
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+.fondo {
+    position: absolute;
+    width: 1902px; /* Ancho deseado */
+    height: 880px; /* Mantiene la proporción de la imagen */
+    top: 56px; /* Ajusta este valor según sea necesario */
+}
+
+
+
+/* Media query para pantallas más pequeñas (dispositivos móviles) */
+.titulo {
+    position: absolute;
+    z-index: 10; /* Asegura que el título se muestre encima de otros elementos */
+    font-size: 50px; /* Tamaño de fuente por defecto para dispositivos grandes */
+    top: 50px; /* Ajusta esta propiedad según tus necesidades */
+    left: 50%; /* Centra el texto horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición para centrar el texto horizontalmente */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    color: white; /* Color de la letra */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega un sombreado para que el texto se vea más destacado */
+}
+
+/* Media query para pantallas más pequeñas (dispositivos móviles) */
+@media (max-width: 768px) {
+    .titulo {
+        position: absolute;
+        font-size: 30px; /* Ajusta el tamaño de la fuente para dispositivos móviles */
+        top: 70px; /* Ajusta esta propiedad para mover el texto más arriba */
+        left: 50%; /* Ajusta esta propiedad para mover el texto más a la izquierda */
+        transform: translateX(-50%); /* Ajusta la posición para centrar el texto horizontalmente */
+        font-weight: bold; /* Hace que el texto sea más grueso */
+        color: white; /* Color de la letra */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega un sombreado para que el texto se vea más destacado */
+    }
+}
+
+
+
+.carousel-container {
+    position: relative;
+    max-width: 660px; /* Ancho máximo reducido para pantallas grandes */
+    margin: auto;
+    margin-top: 140px; /* Ajustado para pantallas grandes */
+    overflow: hidden;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+}
+
+.slide img {
+    width: 100%; /* Asegúrate de que la imagen no exceda el ancho del contenedor */
+    max-width: 690px; /* Ancho máximo reducido en píxeles */
+    height: auto; /* Altura automática para mantener la proporción */
+    max-height: 770px; /* Altura máxima reducida en píxeles */
+    border-radius: 10px; /* Borde redondeado */
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .carousel-container {
+        position: absolute;
+        top: 180px; /* Ajusta esta propiedad para mover el carrusel hacia abajo */
+        left: 10%; /* Ajusta para centrar horizontalmente el carrusel */
+        width: 80%; /* Ancho máximo para pantallas pequeñas */
+        max-width: 80%;
+    }
+    .slide img {
+        max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+        width: 100%; /* Ancho del contenedor */
+        height: 350px; /* Altura fija en píxeles */
+        border-radius: 10px; /* Borde redondeado */
+    }
+    
+    .caption {
+        font-size: 18px;
+    }
+    .prev, .next {
+        font-size: 18px;
+        padding: 5px;
+    }
+}
+
+
+ /* TODO LO QUE ES AJUSTE TAMAÑO CECULAR*/
+@media (max-width: 768px) {
+    .fondo {
+        position: absolute;
+        width: 100%; /* Ancho máximo para dispositivos más pequeños */
+        max-width: none; /* Quita el ancho máximo para que la imagen se ajuste según el tamaño del dispositivo */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+}
+
+ .nav-link:hover {
+        color: #222222 !important;
+    }
+    .dropdown-menu {
+        background-color: rgba(12, 218, 12, 0.9);
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .dropdown-item {
+        color: #fff !important;
+        transition: background-color 0.3s;
+    }
+    .dropdown-item:hover {
+        background-color: #34eb5f !important;
+        color: #fff !important;
+    }
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2855, 55, 55, 0.8%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+
+    .container3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 50px;
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+    }
+    
+    .text-section {
+        max-width: 500px;
+        text-align: center; /* Centra el texto */
+    }
+    
+    .title {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+    
+    .description {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+    
+    .button {
+        display: inline-block;
+        padding: 15px 30px;
+        color: #000;
+        background-color: #fff;
+        border: 2px solid #fff;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 1em;
+        transition: 0.3s;
+    }
+    
+    .button:hover {
+        background-color: #00FF00;
+        color: #fff;
+        border: 2px solid #00FF00;
+    }
+    
+    .image-section {
+        position: relative;
+        text-align: center; /* Centra la imagen y el contenido del info-box */
+    }
+    
+    .image-section img {
+        width: 600px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    
+    .info-box {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: #fff;
+    }
+    
+    .info-box div {
+        margin: 0 20px;
+        text-align: center;
+    }
+    
+    .info-box .number {
+        font-size: 2em;
+        font-weight: bold;
+    }
+    
+    .info-box .text {
+        font-size: 1em;
+    }
+    
+    /* Media Query para pantallas más pequeñas */
+    @media (max-width: 768px) {
+        .container3 {
+            padding: 20px;
+            flex-direction: column; /* Cambia la dirección de los elementos a columna en pantallas pequeñas */
+            align-items: center;
+        }
+    
+        .text-section {
+            max-width: 100%;
+            margin-bottom: 20px; /* Añade margen en la parte inferior */
+        }
+    
+        .title {
+            margin-top: 680px;
+            font-size: 2em; /* Tamaño de fuente ajustado */
+            margin-bottom: 10px;
+        }
+    
+        .description {
+            font-size: 1em; /* Tamaño de fuente ajustado */
+            margin-bottom: 20px;
+        }
+    
+        .button {
+            padding: 10px 20px; /* Ajusta el tamaño del botón */
+            font-size: 0.9em; /* Tamaño de fuente ajustado */
+        }
+    
+        .image-section img {
+            width: 100%;
+            max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
+            border-radius: 10px; /* Radio de borde ajustado */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Sombra ajustada */
+        }
+    
+        .info-box {
+            position: relative; /* Cambia a posición relativa */
+            bottom: auto;
+            left: auto;
+            margin-top: 20px; /* Añade margen en la parte superior */
+            padding: 10px;
+            border-radius: 10px;
+            flex-direction: column; /* Cambia la dirección de los elementos a columna */
+            text-align: center; /* Centra el texto */
+        }
+    
+        .info-box div {
+            margin: 10px 0; /* Espaciado vertical en lugar de horizontal */
+        }
+    
+        .info-box .number {
+            font-size: 1.5em; /* Tamaño de fuente ajustado */
+        }
+    
+        .info-box .text {
+            font-size: 0.9em; /* Tamaño de fuente ajustado */
+        }
+    }
+    
+
+    
+
+
+
+ 
+    
+ 
+    
+    .container1 {
+        text-align: center;
+        padding: 20px;
+    }
+    
+    h1 {
+        margin-top: 50px;
+        font-size: 4em;
+        margin-bottom: 10px;
+        color: #ffffff; /* Un color naranja fuerte que combina bien con negro */
+        font-weight: bold;
+    }
+    
+    p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        color: white; /* Letras blancas */
+    }
+    
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .gallery-item {
+        width: 18%; /* Ajustamos el tamaño para hacerlo más pequeño en PC */
+        border-radius: 10px;
+        overflow: hidden;
+        aspect-ratio: 1; /* Mantiene una relación de aspecto cuadrada */
+    }
+    
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Escala y recorta la imagen para llenar el contenedor */
+        display: block;
+    }
+    
+    @media (max-width: 768px) {
+        .gallery-item { 
+            width: 45%;
+        }
+        h1 {
+            margin-top: 600px; /* Reduce el margen superior en pantallas de hasta 768px */
+            font-size: 2em; /* Tamaño más grande para h1 */
+            font-weight: bold; /* Letra más gruesa para h1 */
+        }
+        p {
+            font-size: 1.1em; /* Tamaño apropiado para subtítulo en pantallas de hasta 768px */
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .gallery {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .gallery-item {
+            width: 45%;
+        }
+        h1 {
+            margin-top: 20px; /* Reduce el margen superior en pantallas de hasta 480px */
+            font-size: 2.5em; /* Tamaño más grande para h1 */
+            font-weight: bold; /* Letra más gruesa para h1 */
+        }
+        p {
+            font-size: 1em; /* Tamaño apropiado para subtítulo en pantallas de hasta 480px */
+        }
+    }
+    
+    
+    
+    
+    
+    .container2 {
+        text-align: center;
+        padding: 20px;
+        
+    }
+    
+    .h11 {
+        margin-top: 50px;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        color: #FFFFFF; /* Color blanco */
+        font-weight: bold;
+    }
+    
+    
+    .p11 {
+        font-size: 1.2em;
+        margin-bottom: 40px;
+        color: #666666; /* Color gris para el subtítulo */
+    }
+    
+    .testimonial-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; /* Espacio entre tarjetas */
+    }
+    
+    .testimonial-card {
+        background-color: #00d42e; /* Fondo blanco para las tarjetas */
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        width: 30%; /* Ancho de las tarjetas */
+        padding: 20px;
+        text-align: left; /* Alinear texto a la izquierda */
+    }
+    
+    .testimonial-card img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        object-fit: cover; /* Ajuste de imagen */
+    }
+    
+    .testimonial-card .name {
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #333333; /* Color oscuro para el nombre */
+    }
+    
+    .testimonial-card .location {
+        font-size: 0.9em;
+        color: #6e5656; /* Color gris claro para la ubicación */
+    }
+    
+    .testimonial-card .stars {
+        color: #ffcc00; /* Color amarillo para las estrellas */
+        margin-bottom: 10px;
+    }
+    
+    @media (max-width: 768px) {
+        .testimonial-card {
+            width: 45%; /* Ajustar ancho para tablets */
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .testimonial-card {
+            width: 90%; /* Ajustar ancho para móviles */
+        }
+        h1 {
+            font-size: 2em; /* Tamaño de h1 para móviles */
+        }
+        p {
+            font-size: 1em; /* Tamaño de p para móviles */
+        }
+    }
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+   
+    
+    .content {
+        flex: 1 0 auto;
+    }
+    
+    .footer {
+        background-color: #020202;
+        color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-shrink: 0;
+        margin-top: 50px; /* Ajusta este valor para bajar el pie de página en PC */
+    }
+    
+    .footer div {
+        flex: 1;
+        padding: 10px;
+    }
+    
+    .footer h2 {
+        margin-top: 0;
+    }
+    
+    .social-icons a {
+        margin-right: 10px;
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+    }
+    
+    .footer input[type="email"] {
+        width: 80%;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .footer button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .footer button:hover {
+        background-color: #45a049;
+    }
+    
+    .copyright {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        color: white;
+    }
+    
+    @media (max-width: 768px) {
+        .footer {
+            margin-top: 300px; /* Ajusta este valor para dispositivos móviles */
+            flex-direction: column;
+            text-align: center;
+        }
+        .footer div {
+            padding: 5px;
+        }
+    }
+    
+    
+
+
+
+
+

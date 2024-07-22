@@ -1,0 +1,126 @@
+body{
+    background-color: black;
+}
+
+.titulo {
+    font-family: 'Arial Black', Gadget, sans-serif; /* Fuente más gruesa */
+    font-size: 70px; /* Tamaño de fuente más grande */
+    color: #f1c40f; /* Color amarillo brillante para el texto */
+    text-align: center; /* Centra el texto */
+    margin-top: 20px; /* Margen superior */
+    margin-bottom: 20px; /* Margen inferior */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 4px; /* Espacio entre letras */
+    background-color: #000; /* Fondo negro */
+    padding: 20px; /* Espacio interior */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    border: 2px solid #f1c40f; /* Borde amarillo brillante */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: calc(30% - 20px); /* Reduce the width */
+    max-width: 300px; /* Optional: set a maximum width */
+}
+
+.card img {
+    width: 60%;
+    max-height: 100px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    font-size: 1.2rem;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-body {
+    padding: 10px; /* Reduce padding */
+    text-align: center;
+}
+
+.card-footer {
+    align-items: center;
+    display: flex;
+    justify-content: center; /* Center the button */
+    padding: 10px 0; /* Reduce padding */
+}
+
+.card-footer button {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.card-footer button:hover {
+    background-color: #45a049;
+}
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+    .card {
+        width: calc(100% - 20px); /* One card per row */
+    }
+
+    .card-body {
+        padding: 1px 10px; /* Further reduce padding */
+    }
+
+    .card-footer {
+        padding: 5px 0; /* Further reduce padding */
+    }
+
+    .card-footer button {
+        padding: 8px 16px; /* Slightly reduce button padding */
+    }
+}
+
+
+
+
+
+
+
+/* todo Movil */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 50px; /* Reduce el tamaño de la fuente */
+        padding: 15px; /* Reduce el padding */
+        letter-spacing: 2px; /* Reduce el espacio entre letras */
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 40px; /* Reduce aún más el tamaño de la fuente */
+        padding: 10px; /* Reduce más el padding */
+        letter-spacing: 1px; /* Reduce más el espacio entre letras */
+    }
+}

@@ -1,0 +1,111 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s;
+}
+
+header {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #444;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #00aaff;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event {
+    background-color: #222;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.event:hover {
+    transform: scale(1.05);
+}
+
+.event-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.event-details {
+    text-align: left;
+    width: 100%;
+}
+
+.event h2 {
+    margin: 10px 0;
+    color: #00aaff;
+}
+
+.mapa {
+    margin-top: 10px;
+    border: 2px solid #00aaff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+
+footer {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid #444;
+}
+
+footer p {
+    margin: 0;
+    color: #777;
+}
+
+/* Ajustar el tamaño de la imagen para pantallas grandes */
+@media (min-width: 601px) {
+    .event img {
+        max-width: 80%; /* Ajusta este valor según tu preferencia */
+    }
+}
+
+/* Ajustar el tamaño del iframe de Google Maps para pantallas grandes */
+@media (min-width: 601px) {
+    .mapa iframe {
+        height: 400px; /* Ajusta este valor según tu preferencia */
+    }
+}
+
+/* Mantener el tamaño de la imagen y el iframe para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .event img {
+        width: 100%;
+    }
+
+    .mapa iframe {
+        height: 300px; /* Ajusta este valor si es necesario para pantallas móviles */
+    }
+}
+
